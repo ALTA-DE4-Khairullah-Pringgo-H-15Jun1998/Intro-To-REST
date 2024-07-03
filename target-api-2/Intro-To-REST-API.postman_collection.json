@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "d0f35fab-e76b-49e9-98f0-273517e44ffb",
+		"name": "Intro-To-REST-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36688979"
+	},
+	"item": [
+		{
+			"name": "Target API 1 (newsAPI)",
+			"item": [
+				{
+					"name": "Headlines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{newsAPIBaseURL}}/top-headlines?country=us&apiKey={{newsAPIKey}}",
+							"host": [
+								"{{newsAPIBaseURL}}"
+							],
+							"path": [
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "us"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{newsAPIKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Everything",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsAPIBaseURL}}/everything?q=bitcoin&apiKey={{newsAPIKey}}",
+							"host": [
+								"{{newsAPIBaseURL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "bitcoin"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{newsAPIKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsAPIBaseURL}}/top-headlines/sources?apiKey={{newsAPIKey}}",
+							"host": [
+								"{{newsAPIBaseURL}}"
+							],
+							"path": [
+								"top-headlines",
+								"sources"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{newsAPIKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mentioning Apple",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsAPIBaseURL}}/everything?q=apple&from=2024-07-02&to=2024-07-02&sortBy=popularity&apiKey={{newsAPIKey}}",
+							"host": [
+								"{{newsAPIBaseURL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "apple"
+								},
+								{
+									"key": "from",
+									"value": "2024-07-02"
+								},
+								{
+									"key": "to",
+									"value": "2024-07-02"
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{newsAPIKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles published by TechCrunch and The Next Web",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsAPIBaseURL}}/everything?domains=techcrunch.com,thenextweb.com&apiKey={{newsAPIKey}}",
+							"host": [
+								"{{newsAPIBaseURL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "domains",
+									"value": "techcrunch.com,thenextweb.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{newsAPIKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Target API 2 (swapi)",
+			"item": [
+				{
+					"name": "People",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapiBaseURL}}/people/1/",
+							"host": [
+								"{{swapiBaseURL}}"
+							],
+							"path": [
+								"people",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapiBaseURL}}/films/1/",
+							"host": [
+								"{{swapiBaseURL}}"
+							],
+							"path": [
+								"films",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Starships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapiBaseURL}}/starships/9/",
+							"host": [
+								"{{swapiBaseURL}}"
+							],
+							"path": [
+								"starships",
+								"9",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapiBaseURL}}/vehicles/4/",
+							"host": [
+								"{{swapiBaseURL}}"
+							],
+							"path": [
+								"vehicles",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapiBaseURL}}/species/3/",
+							"host": [
+								"{{swapiBaseURL}}"
+							],
+							"path": [
+								"species",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Target API 3 (reqres)",
+			"item": [
+				{
+					"name": "Get Users 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reqresBaseURL}}/users/2",
+							"host": [
+								"{{reqresBaseURL}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John\",\r\n  \"job\": \"developer\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reqresBaseURL}}/users",
+							"host": [
+								"{{reqresBaseURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John\",\r\n  \"job\": \"specialist developer\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reqresBaseURL}}/users/1",
+							"host": [
+								"{{reqresBaseURL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{reqresBaseURL}}/users/1",
+							"host": [
+								"{{reqresBaseURL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unknown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reqresBaseURL}}/unknown",
+							"host": [
+								"{{reqresBaseURL}}"
+							],
+							"path": [
+								"unknown"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
